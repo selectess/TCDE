@@ -1,0 +1,376 @@
+# ============================================================================
+# TCDE - Professional .gitignore for GitHub Publication
+# ============================================================================
+
+# ============================================================================
+# BUILD ARTIFACTS & BINARIES
+# ============================================================================
+
+# Compiled Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+bin/
+build/
+build_native_benchmarks/
+obj/
+
+# Debug symbols
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Binaries in tests/ (compiled test executables without extension)
+tests/test_adaptive_memory
+tests/test_anti_mock_guard
+tests/test_anti_mock_simple
+tests/test_autocatalysis
+tests/test_autopoiesis_complete
+tests/test_consciousness_complete
+tests/test_correlation_calc
+tests/test_coupling_complete
+tests/test_creativity_complete
+tests/test_dimensional_expansion
+tests/test_emergence_complete
+tests/test_emergence_detector
+tests/test_emergent_dimensions
+tests/test_exhaustive_analysis_discovery
+tests/test_field_energy_variations
+tests/test_geometric_consciousness
+tests/test_geometry_complete
+tests/test_his_authenticity
+tests/test_holistic_benchmark
+tests/test_intentionality_complete
+tests/test_memory_complete
+tests/test_multimodality_complete
+tests/test_nanosecond_metrics
+tests/test_paranoid_security
+tests/test_phi_authenticity_proof
+tests/test_task_0_1_11d_infrastructure
+tests/test_task_0_2_bitemporal_control
+tests/test_task_0_3_self_representation
+tests/test_task_0_4_autopoiesis
+tests/test_task_0_6_his_complete
+tests/test_tcde_integral_entity
+tests/test_temporality_complete
+tests/test_ultra_rigorous_validator
+
+# Binaries in examples/
+examples/continuous_evolution
+
+# Specific binaries in root
+tcde_simple_benchmark
+test_additional_properties
+test_authentic_simple
+test_autopoiesis_benchmark
+test_creativity_benchmark
+test_curvature_debug
+test_curvature_fixed
+test_dependency_properties
+test_end_to_end_integration
+test_geometric_curvature
+test_geometric_curvature_new
+test_holistic
+test_projection_3d
+test_property2_only
+test_simple_autopoiesis
+test_validation_framework
+libtcde.a
+
+# Binaries in applications
+applications/*/demo/test_*
+!applications/*/demo/test_*.c
+
+# ============================================================================
+# IDE & EDITOR CONFIGURATIONS
+# ============================================================================
+
+.vscode/
+.idea/
+.kiro/
+.trae/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# ============================================================================
+# PYTHON ENVIRONMENT
+# ============================================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+.ipynb_checkpoints/
+
+# ============================================================================
+# CACHE & TEMPORARY FILES
+# ============================================================================
+
+.cache/
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+temp_*/
+
+# ============================================================================
+# WORK FILES & SESSION REPORTS (Root level .md files)
+# ============================================================================
+
+# Session and analysis reports
+ACTION_PLAN_*.md
+ANALYSE_*.md
+ANIMATIONS_*.md
+ARCHIVE_*.md
+ASI_VALIDATION_*.md
+CARTOGRAPHIE_*.md
+CENTRALISATION_*.md
+COMPILATION_*.md
+COMPLETION_*.md
+COPIE_*.md
+CORRECTION_*.md
+DEMO_MULTIMODAL_*.md
+DUPLICATE_*.md
+E2I_TASKS_*.md
+EMPIRICAL_*.md
+EXECUTION_*.md
+EXECUTIVE_*.md
+EXISTING_*.md
+EXPLICATION_*.md
+EXPORTS_*.md
+FINAL_*.md
+GEOMETRIC_*.md
+GITHUB_*.md
+INDEX_*.md
+LISTE_*.md
+MARKDOWN_*.md
+MISSION_*.md
+MODALITES_*.md
+MOVE37_*.md
+PHASE_*.md
+PLAN_*.md
+PROJET_*.md
+REAL_WORLD_*.md
+REFACTORISATION_*.md
+REPONSE_*.md
+RESTRUCTURATION_*.md
+RESUME_*.md
+REVISION_*.md
+REVOLUTIONARY_*.md
+SESSION_*.md
+SPECS_*.md
+SPEC_E2I_*.md
+STATUT_*.md
+SYNTHESE_*.md
+TASK_*.md
+TCDE_*.md
+TESTS_*.md
+VALIDATION_*.md
+VERIFICATION_*.md
+VISUALIS*.md
+ZENODO_*.md
+ZERO_*.md
+
+# Keep only essential documentation
+!README.md
+
+# Exclude other root .md files
+README_*.md
+VISUALIZATIONS_*.md
+VISUALIZATION_*.md
+FINAL_*.md
+
+# Text files to exclude
+*.txt
+!AUTHORS.txt
+
+# ============================================================================
+# ARCHIVES & BACKUPS
+# ============================================================================
+
+archive/
+MehdiTCDE/
+TCDE_Archive_v1.0/
+*.tar
+*.tar.gz
+*.zip
+*.bak
+*.backup
+*.broken
+
+# ============================================================================
+# DATA & EXPORTS
+# ============================================================================
+
+exports/
+benchmarks_results/
+validation_results/
+tcde_analysis_output/
+data/*.csv
+data/*.dat
+*.pkl
+*.h5
+*.hdf5
+
+# Keep specific data files
+!data/README.md
+
+# ============================================================================
+# VISUALIZATIONS (Keep only essential)
+# ============================================================================
+
+visualizations/
+*.gif
+
+# Keep figures
+!figures/
+!Figure_*.png
+!docs/**/*.png
+!docs/**/*.gif
+
+# ============================================================================
+# GENERATED FILES
+# ============================================================================
+
+# CSV outputs
+tcde_simple_3d_topology.csv
+
+# PNG outputs at root (keep Figure_*.png)
+tcde_simple_3d_topology.png
+TCDE_100-Cycle_evo.png
+
+# ============================================================================
+# SCRIPTS (Keep only essential)
+# ============================================================================
+
+# Shell scripts to exclude (work scripts)
+activate_tcde_maximal.sh
+analyze_archive_duplicates.sh
+analyze_duplicates.sh
+auto_cleanup.sh
+create_complete_archive.sh
+create_tcde_complete_archive.sh
+fix_all_includes.sh
+fix_corrupted_animations.py
+fix_duplicate_symbols.sh
+monitor_temperature.sh
+open_research_paper.sh
+optimize_mac_performance.sh
+organiser_et_nettoyer_projet.sh
+present_tcde_to_scientific_community.sh
+remove_revolutionary_final.sh
+remove_revolutionary_words.sh
+run_3d_demo.sh
+run_3d_visualization_tests.sh
+run_all_benchmarks.sh
+run_all_e2i_tests.sh
+run_asi_learning_tests.sh
+run_asi_validation.sh
+run_authentic_validation.sh
+run_complete_tcde_validation.sh
+run_comprehensive_tcde_demonstration.sh
+run_comprehensive_test_validation.sh
+run_native_benchmarks_tests.sh
+run_phase2_tests.sh
+run_phase6_benchmarks.sh
+run_tcde_scientific_demo.sh
+run_ultra_authentic_e2i_tests.sh
+validate_asi_demonstration.sh
+validate_e2i_components.sh
+
+# Python scripts to exclude (work scripts)
+analyze_project_stats.py
+demo_multimodal_complete.py
+extract_asi_metrics.py
+generate_*.py
+recreate_damaged_visualizations.py
+update_e2i_tasks.py
+visualize_*.py
+
+# ============================================================================
+# C SOURCE FILES TO EXCLUDE (Work/test files at root)
+# ============================================================================
+
+tcde_authentic_benchmark.c
+tcde_e2i_real_benchmark.c
+tcde_simple_benchmark.c
+test_end_to_end_integration.c
+test_simple_autopoiesis.c
+
+# ============================================================================
+# SECURITY & SENSITIVE FILES
+# ============================================================================
+
+*.key
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+*password*
+*secret*
+*token*
+
+# ============================================================================
+# OS GENERATED FILES
+# ============================================================================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============================================================================
+# PROFILING & DEBUGGING
+# ============================================================================
+
+# Core dumps (not src/core/)
+/core
+core.*
+gmon.out
+*.gcov
+*.gcda
+*.gcno
+
+# ============================================================================
+# MAKEFILES (Keep main Makefile only)
+# ============================================================================
+
+Makefile.demo
+Makefile.exhaustive_analysis

@@ -1,0 +1,44 @@
+# TCDE - Topological Cognitive Diffusive Emergence
+# A Geometric Framework for Emergent Intelligence
+
+## Principal Author
+
+**Mehdi Wahbi**
+- ORCID: 0009-0007-0110-9437
+- Email: m.wahbi.move37@atomicmail.io
+- Affiliation: Move37 Initiative, Independent Researcher
+- Role: Lead Researcher, TCDE Architecture Designer
+
+## Contributions
+
+- TCDE theoretical framework development
+- Mathematical formulation of TDE equations (Topological Diffusion Equation)
+- Implementation of geometric consciousness metrics
+- ASI validation methodology
+- End-to-Infinite (E2I) architecture
+- 6D Riemannian manifold implementation
+- Autopoietic system design
+
+## Project Information
+
+- Project: TCDE (Topological Cognitive Diffusive Emergence)
+- Repository: https://github.com/selectess/TCDE
+- DOI: 10.5281/zenodo.17907427
+- License: MIT
+- Started: 2024
+- Status: Active Research
+
+## Attribution
+
+Created by Mehdi Wahbi, 2025 - Move37 Initiative
+
+If you use this work in academic research, please cite:
+
+@software{wahbi_tcde_2025,
+  author       = {Wahbi, Mehdi},
+  title        = {TCDE: Topological Cognitive Diffusive Emergence},
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17907427},
+  url          = {https://doi.org/10.5281/zenodo.17907427}
+}

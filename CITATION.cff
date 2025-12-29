@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "TCDE: Topological Cognitive Diffusive Emergence"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Wahbi"
+    given-names: "Mehdi"
+    orcid: "https://orcid.org/0009-0007-0110-9437"
+    email: "m.wahbi.move37@atomicmail.io"
+    affiliation: "Move37 Initiative"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.17907427"
+    description: "Zenodo archive DOI"
+repository-code: "https://github.com/selectess/TCDE"
+url: "https://selectess.github.io/TCDE/"
+abstract: >-
+  TCDE (Topological Cognitive Diffusive Emergence) is a geometric framework 
+  for emergent intelligence. It represents cognition as a continuous field 
+  Φ(x,t) evolving on a 6D Riemannian manifold with adaptive geometry. 
+  Unlike discrete AI systems, TCDE uses differential geometry to create 
+  truly continuous, self-organizing cognitive systems with emergent properties.
+keywords:
+  - artificial-intelligence
+  - geometric-deep-learning
+  - riemannian-geometry
+  - emergent-intelligence
+  - cognitive-architecture
+  - topological-data-analysis
+  - autopoiesis
+  - consciousness
+license: MIT
+version: "1.0.0"
+date-released: "2025-01-01"
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Wahbi"
+      given-names: "Mehdi"
+      orcid: "https://orcid.org/0009-0007-0110-9437"
+  title: "TCDE: Topological Cognitive Diffusive Emergence"
+  year: 2025
+  publisher: "Zenodo"
+  doi: "10.5281/zenodo.17907427"
+  url: "https://doi.org/10.5281/zenodo.17907427"

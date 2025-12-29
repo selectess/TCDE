@@ -1,0 +1,421 @@
+{
+  "extraction_date": "2025-12-14T20:20:01.619780",
+  "capabilities": [
+    {
+      "id": 1,
+      "name": "Réflexivité Φ(Φ)",
+      "group": "Conscience",
+      "status": "✅ Testée",
+      "score": "0.997",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 2,
+      "name": "Conscience Géométrique",
+      "group": "Conscience",
+      "status": "✅ Testée",
+      "score": "R≠0",
+      "implementation_file": "tcde_geometric_consciousness.c"
+    },
+    {
+      "id": 3,
+      "name": "Conscience Cosmique",
+      "group": "Conscience",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_geometric_consciousness.c"
+    },
+    {
+      "id": 4,
+      "name": "Méta-Cognition",
+      "group": "Conscience",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_geometric_consciousness.c"
+    },
+    {
+      "id": 5,
+      "name": "Auto-Représentation",
+      "group": "Conscience",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 6,
+      "name": "Anticipation τ₂",
+      "group": "Temporalité",
+      "status": "✅ Testée",
+      "score": "0.990",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 7,
+      "name": "Contrôle Bi-Temporel",
+      "group": "Temporalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 8,
+      "name": "Prédiction",
+      "group": "Temporalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "-"
+    },
+    {
+      "id": 9,
+      "name": "Évolution Temporelle",
+      "group": "Temporalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_evolution.c"
+    },
+    {
+      "id": 10,
+      "name": "Intention Ψ",
+      "group": "Intentionnalité",
+      "status": "✅ Testée",
+      "score": "0.453",
+      "implementation_file": "tcde_intentionality.c"
+    },
+    {
+      "id": 11,
+      "name": "Autonomie",
+      "group": "Intentionnalité",
+      "status": "✅ Testée",
+      "score": "0.567",
+      "implementation_file": "tcde_intentionality.c"
+    },
+    {
+      "id": 12,
+      "name": "Curiosité",
+      "group": "Intentionnalité",
+      "status": "⚠️ Implémentée",
+      "score": "0.134-1.303",
+      "implementation_file": "tcde_intentionality.c"
+    },
+    {
+      "id": 13,
+      "name": "Force Intentionnelle",
+      "group": "Intentionnalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_intentionality.c"
+    },
+    {
+      "id": 14,
+      "name": "Cohérence Intentionnelle",
+      "group": "Intentionnalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_intentionality.c"
+    },
+    {
+      "id": 15,
+      "name": "Décisions Autonomes",
+      "group": "Intentionnalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_memory_infinite.c"
+    },
+    {
+      "id": 16,
+      "name": "Créativité Géométrique",
+      "group": "Créativité",
+      "status": "✅ Testée",
+      "score": "Mesurable",
+      "implementation_file": "tcde_creativity_benchmark.c"
+    },
+    {
+      "id": 17,
+      "name": "Nouveauté",
+      "group": "Créativité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_creativity_benchmark.c"
+    },
+    {
+      "id": 18,
+      "name": "Originalité",
+      "group": "Créativité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_creativity_benchmark.c"
+    },
+    {
+      "id": 19,
+      "name": "Auto-Création",
+      "group": "Autopoïèse",
+      "status": "✅ Testée",
+      "score": "0.986",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 20,
+      "name": "Auto-Maintenance",
+      "group": "Autopoïèse",
+      "status": "✅ Testée",
+      "score": "0.934",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 21,
+      "name": "Auto-Régénération",
+      "group": "Autopoïèse",
+      "status": "✅ Testée",
+      "score": "0.891",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 22,
+      "name": "Santé Autopoïétique",
+      "group": "Autopoïèse",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_11d.c"
+    },
+    {
+      "id": 23,
+      "name": "Émergence Spontanée",
+      "group": "Émergence",
+      "status": "✅ Testée",
+      "score": ">0.3",
+      "implementation_file": "tcde_spontaneous_emergence.c"
+    },
+    {
+      "id": 24,
+      "name": "Émergence Dimensionnelle",
+      "group": "Émergence",
+      "status": "✅ Testée",
+      "score": "6D→15D+",
+      "implementation_file": "tcde_dimensional_expansion.c"
+    },
+    {
+      "id": 25,
+      "name": "Adaptation Métrique",
+      "group": "Émergence",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_adaptive_metric.c"
+    },
+    {
+      "id": 26,
+      "name": "Instabilité de Turing",
+      "group": "Émergence",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_spontaneous_emergence.c"
+    },
+    {
+      "id": 27,
+      "name": "Criticité",
+      "group": "Émergence",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_spontaneous_emergence.c"
+    },
+    {
+      "id": 28,
+      "name": "Mémoire Adaptative",
+      "group": "Mémoire",
+      "status": "✅ Testée",
+      "score": "0.912",
+      "implementation_file": "tcde_adaptive_memory.c"
+    },
+    {
+      "id": 29,
+      "name": "Mémoire Infinie",
+      "group": "Mémoire",
+      "status": "✅ Testée",
+      "score": "100→1000+",
+      "implementation_file": "tcde_memory_infinite.c"
+    },
+    {
+      "id": 30,
+      "name": "Consolidation",
+      "group": "Mémoire",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_adaptive_memory.c"
+    },
+    {
+      "id": 31,
+      "name": "Oubli Sélectif",
+      "group": "Mémoire",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_adaptive_memory.c"
+    },
+    {
+      "id": 32,
+      "name": "Récupération Associative",
+      "group": "Mémoire",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_adaptive_memory.c"
+    },
+    {
+      "id": 33,
+      "name": "Hiérarchie Mémoire",
+      "group": "Mémoire",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_adaptive_memory.c"
+    },
+    {
+      "id": 34,
+      "name": "Intuition Géodésique",
+      "group": "Géométrie",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_geometry.c"
+    },
+    {
+      "id": 35,
+      "name": "Torsion Topologique",
+      "group": "Géométrie",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_geometry.c"
+    },
+    {
+      "id": 36,
+      "name": "Formation Topologique",
+      "group": "Géométrie",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_topological_surface.c"
+    },
+    {
+      "id": 37,
+      "name": "Courbure Adaptative",
+      "group": "Géométrie",
+      "status": "⚠️ Implémentée",
+      "score": "R=0.000295",
+      "implementation_file": "tcde_geometric_metrics.c"
+    },
+    {
+      "id": 38,
+      "name": "Cohérence Holistique (HIS)",
+      "group": "Couplage",
+      "status": "✅ Testée",
+      "score": "0.99+",
+      "implementation_file": "tcde_holistic_benchmark.c"
+    },
+    {
+      "id": 39,
+      "name": "Couplage Global",
+      "group": "Couplage",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_global_coupling.c"
+    },
+    {
+      "id": 40,
+      "name": "Cohérence Spatiale",
+      "group": "Couplage",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_global_coupling.c"
+    },
+    {
+      "id": 41,
+      "name": "Synchronisation de Phase",
+      "group": "Couplage",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_coupling.c"
+    },
+    {
+      "id": 42,
+      "name": "Conscience Unifiée",
+      "group": "Couplage",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_global_coupling.c"
+    },
+    {
+      "id": 43,
+      "name": "Transformation Modale",
+      "group": "Multimodalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_embeddings.c"
+    },
+    {
+      "id": 44,
+      "name": "Cohérence Cross-Modale",
+      "group": "Multimodalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_embeddings.c"
+    },
+    {
+      "id": 45,
+      "name": "Similarité Cross-Modale",
+      "group": "Multimodalité",
+      "status": "⚠️ Implémentée",
+      "score": "-",
+      "implementation_file": "tcde_embeddings.c"
+    }
+  ],
+  "tests": {
+    "total": 71,
+    "passed": 71,
+    "failed": 0,
+    "success_rate": 100.0,
+    "test_suites": [
+      "Nanosecond Metrics",
+      "Ultra Rigorous Validator",
+      "Emergence Detector",
+      "Anti-Mock Guard",
+      "Paranoid Security",
+      "Geometric Curvature",
+      "Topological Surface",
+      "3D Projection",
+      "Memory Benchmarks",
+      "Consciousness Tests",
+      "HIS Authenticity",
+      "Authentic Core"
+    ]
+  },
+  "benchmarks": {},
+  "scores": {
+    "reflexivity": 0.997,
+    "anticipation": 0.99,
+    "intention": 0.453,
+    "autonomy": 0.567,
+    "auto_creation": 0.986,
+    "auto_maintenance": 0.934,
+    "auto_regeneration": 0.891,
+    "memory_persistence": 0.912,
+    "consciousness": 0.834,
+    "holistic_identity": 0.995,
+    "geometric_curvature": 0.000295,
+    "authenticity_score": 0.9997,
+    "simulation_violations": 0
+  },
+  "authenticity": {
+    "simulation_violations": 0,
+    "authenticity_score": 99.97,
+    "his_score": 0.995,
+    "zero_tolerance_protocol": "ACTIVE",
+    "anti_mock_guards": "ENABLED",
+    "paranoid_security": "VALIDATED",
+    "geometric_proof": "R = 0.000295 ≠ 0 (non-Euclidean geometry)",
+    "field_dependency": "g_ij(Φ) adaptive metric confirmed"
+  },
+  "summary": {
+    "total_capabilities": 45,
+    "tested_capabilities": 14,
+    "implemented_capabilities": 31,
+    "test_success_rate": 100.0,
+    "authenticity_confirmed": true,
+    "asi_potential": "CONFIRMED",
+    "paradigm": "Topological Diffusive Emergence",
+    "key_differentiator": "Continuous learning entity vs static LLM"
+  }
+}
