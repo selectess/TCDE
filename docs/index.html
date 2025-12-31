@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCDE | Topological Cognitive Diffusive Emergence - Complete Research Project</title>
-    <meta name="description" content="TCDE: A revolutionary geometric framework for emergent intelligence. 11 inventions, 12 emergent capabilities, complete C implementation. By Mehdi Wahbi, Move37 Initiative.">
-    <meta name="keywords" content="TCDE, ASI, geometric intelligence, Riemannian manifold, continuous field, emergent AI, differential geometry, autopoiesis, consciousness">
+    <title>TCDE | Topological Cognitive Diffusive Emergence - Research Project</title>
+    <meta name="description" content="TCDE: A geometric framework for emergent intelligence through continuous field dynamics on Riemannian manifolds. Academic research by Mehdi Wahbi.">
+    <meta name="keywords" content="TCDE, geometric intelligence, Riemannian manifold, continuous field, emergent AI, differential geometry, autopoiesis">
     <meta name="author" content="Mehdi Wahbi">
     <link rel="canonical" href="https://selectess.github.io/TCDE/">
     
@@ -17,221 +17,307 @@
     
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #1e3a5f;
-            --accent: #3b82f6;
-            --accent-light: #60a5fa;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --text: #1e293b;
-            --text-light: #64748b;
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary: #374151;
+            --accent: #059669;
+            --text: #111827;
+            --text-muted: #6b7280;
             --bg: #ffffff;
-            --bg-alt: #f8fafc;
-            --bg-dark: #0f172a;
-            --border: #e2e8f0;
-            --gradient: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%);
+            --bg-section: #f9fafb;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+            --border-light: #f3f4f6;
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.6;
             font-size: 16px;
         }
         
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .container-narrow { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
         
-        /* Hero Section */
-        .hero {
-            background: var(--gradient);
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
-            padding: 5rem 0 4rem;
-            text-align: center;
+            padding: 4rem 0 3rem;
             position: relative;
-            overflow: hidden;
         }
         
-        .hero::before {
+        header::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20.5V18H18v2.5h-2.5V22H18v2.5h2V22h2.5v-1.5H20zM0 38.59l2.59-2.59 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.59 2.59L1.41 5.41 0 4V1.4zM38.59 40l-2.59-2.59 1.41-1.41L40 38.59V40h-1.41zM40 1.41L37.41 4 36 2.59 38.59 0H40v1.41z'/%3E%3C/g%3E%3C/svg%3E");
         }
         
-        .hero-content { position: relative; z-index: 1; }
+        .header-content { position: relative; z-index: 1; text-align: center; }
         
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
-        }
-        
-        .hero .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.95;
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
             margin-bottom: 0.5rem;
         }
         
-        .hero .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.85;
-            max-width: 700px;
+        .header-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 0.75rem;
+        }
+        
+        .header-description {
+            font-size: 1rem;
+            opacity: 0.8;
+            max-width: 600px;
             margin: 0 auto 2rem;
         }
         
-        /* Stats Bar */
-        .stats-bar {
+        /* Metadata badges */
+        .metadata {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
             margin-top: 2rem;
         }
         
-        .stat-item {
+        .metadata-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .metadata-item a { color: white; text-decoration: underline; }
+        
+        /* Statistics */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stat {
             text-align: center;
         }
         
         .stat-value {
-            font-size: 2.5rem;
-            font-weight: 700;
             display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
         }
         
         .stat-label {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             opacity: 0.8;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
         }
         
         /* Navigation */
         nav {
-            background: var(--primary);
-            padding: 1rem 0;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 50;
+            backdrop-filter: blur(10px);
         }
         
-        nav ul {
-            list-style: none;
+        .nav-container {
             display: flex;
             justify-content: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
             gap: 0.5rem;
+            list-style: none;
             flex-wrap: wrap;
         }
         
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
+        .nav-links a {
             padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.2s;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s ease;
         }
         
-        nav a:hover { background: rgba(255,255,255,0.15); }
+        .nav-links a:hover {
+            color: var(--primary);
+            background: var(--bg-section);
+        }
         
         /* Sections */
-        section { padding: 5rem 0; }
-        section:nth-child(even) { background: var(--bg-alt); }
+        section {
+            padding: 4rem 0;
+        }
+        
+        section:nth-child(even) {
+            background: var(--bg-section);
+        }
         
         .section-header {
             text-align: center;
             margin-bottom: 3rem;
         }
         
-        .section-header h2 {
-            font-size: 2.5rem;
+        .section-title {
+            font-size: 2.25rem;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            color: var(--text);
+            margin-bottom: 0.75rem;
         }
         
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--text-light);
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
         }
         
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--secondary);
-            margin: 2.5rem 0 1rem;
-        }
-        
-        /* Cards Grid */
-        .cards-grid {
+        /* Grid layouts */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
         }
         
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        
+        /* Cards */
         .card {
-            background: white;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
         }
         
         .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
         
         .card-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.25rem;
+            flex-shrink: 0;
         }
         
-        .card h4 {
-            font-size: 1.2rem;
+        .card-title {
+            font-size: 1.125rem;
             font-weight: 600;
-            color: var(--primary);
+            color: var(--text);
             margin-bottom: 0.5rem;
         }
         
-        .card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
+        .card-description {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            line-height: 1.5;
         }
         
-        .card .metric {
+        .card-metric {
             display: inline-block;
             background: #dcfce7;
             color: #166534;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-top: 0.5rem;
+            margin-top: 0.75rem;
         }
         
-        /* Equation Box */
-        .equation-box {
-            background: var(--bg-dark);
+        /* Numbered items */
+        .numbered-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .numbered-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            position: relative;
+        }
+        
+        .item-number {
+            position: absolute;
+            top: -10px;
+            left: 1.25rem;
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .item-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            padding-top: 0.5rem;
+        }
+        
+        .item-description {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+        
+        /* Equations */
+        .equation-container {
+            background: var(--text);
             color: white;
             border-radius: 12px;
             padding: 2rem;
@@ -240,50 +326,61 @@
         }
         
         .equation {
-            font-size: 1.4rem;
-            font-family: 'Cambria Math', 'Times New Roman', serif;
-            margin: 1rem 0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.25rem;
+            margin: 0.75rem 0;
         }
         
         .equation-label {
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             opacity: 0.7;
+            margin-top: 0.5rem;
         }
         
-        /* Comparison Table */
-        .comparison-table {
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
-            background: white;
+            background: var(--bg-card);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: var(--shadow);
         }
         
-        .comparison-table th,
-        .comparison-table td {
+        .table th,
+        .table td {
             padding: 1rem 1.5rem;
             text-align: left;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-light);
         }
         
-        .comparison-table th {
-            background: var(--primary);
-            color: white;
+        .table th {
+            background: var(--bg-section);
             font-weight: 600;
+            color: var(--text);
+            font-size: 0.875rem;
         }
         
-        .comparison-table tr:last-child td { border-bottom: none; }
+        .table td {
+            font-size: 0.9375rem;
+        }
         
-        .comparison-table .check { color: var(--success); font-weight: bold; }
-        .comparison-table .cross { color: #ef4444; }
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .table .positive { color: var(--accent); font-weight: 600; }
+        .table .negative { color: #dc2626; }
         
         /* Timeline */
         .timeline {
             position: relative;
-            padding-left: 3rem;
-            margin: 2rem 0;
+            padding-left: 2rem;
         }
         
         .timeline::before {
@@ -292,250 +389,226 @@
             left: 0.75rem;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: var(--gradient);
-            border-radius: 3px;
+            width: 2px;
+            background: var(--border);
         }
         
         .timeline-item {
             position: relative;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             padding-left: 2rem;
         }
         
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -2.35rem;
-            top: 0.3rem;
-            width: 16px;
-            height: 16px;
-            background: var(--accent);
+            left: -1.75rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
             border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px var(--accent);
+            border: 3px solid var(--bg);
         }
         
         .timeline-date {
-            font-weight: 700;
-            color: var(--accent);
-            font-size: 0.9rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
             margin-bottom: 0.25rem;
         }
         
         .timeline-title {
+            font-size: 1.125rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
         }
         
-        .timeline-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
+        .timeline-description {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
         }
         
-        /* Inventions Grid */
-        .inventions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-        
-        .invention-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.25rem;
-            border-left: 4px solid var(--accent);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .invention-card .number {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 28px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-right: 0.5rem;
-        }
-        
-        .invention-card h5 {
-            display: inline;
-            font-size: 1rem;
-            color: var(--primary);
-        }
-        
-        .invention-card p {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-        
-        .invention-card code {
-            background: var(--bg-alt);
-            padding: 0.15rem 0.4rem;
-            border-radius: 3px;
-            font-size: 0.85rem;
-        }
-        
-        /* Code Block */
+        /* Code blocks */
         pre {
-            background: var(--bg-dark);
-            color: #e2e8f0;
+            background: var(--text);
+            color: #e5e7eb;
             padding: 1.5rem;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow-x: auto;
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 1.5rem 0;
         }
         
         code {
-            font-family: 'Fira Code', 'Consolas', monospace;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+        }
+        
+        .inline-code {
+            background: var(--bg-section);
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-size: 0.875em;
         }
         
         /* Buttons */
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.2s;
-            margin: 0.25rem;
+            transition: all 0.2s ease;
+            font-size: 0.9375rem;
         }
         
         .btn-primary {
-            background: var(--accent);
+            background: var(--primary);
             color: white;
         }
         
-        .btn-primary:hover { background: #2563eb; }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
         
-        .btn-outline {
+        .btn-secondary {
             background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
+            color: var(--primary);
+            border: 1px solid var(--primary);
         }
         
-        .btn-outline:hover {
-            background: var(--accent);
+        .btn-secondary:hover {
+            background: var(--primary);
             color: white;
         }
         
-        /* Badges */
-        .badges {
+        .btn-group {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
             justify-content: center;
-            margin: 1.5rem 0;
+            flex-wrap: wrap;
+            margin: 2rem 0;
         }
-        
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.15);
-            border-radius: 50px;
-            font-size: 0.85rem;
-        }
-        
-        .badge a { color: white; text-decoration: underline; }
         
         /* Footer */
         footer {
-            background: var(--bg-dark);
+            background: var(--text);
             color: white;
-            padding: 4rem 0 2rem;
+            padding: 3rem 0 2rem;
         }
-        
-        footer a { color: var(--accent-light); }
         
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .footer-section h4 {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
+            font-weight: 600;
             margin-bottom: 1rem;
-            color: white;
         }
         
         .footer-section p,
         .footer-section li {
-            color: #94a3b8;
-            font-size: 0.95rem;
+            color: #d1d5db;
+            font-size: 0.9375rem;
             margin-bottom: 0.5rem;
         }
         
-        .footer-section ul { list-style: none; }
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
         
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #64748b;
-            font-size: 0.9rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.875rem;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero .tagline { font-size: 1.2rem; }
-            .stats-bar { gap: 1.5rem; }
-            .stat-value { font-size: 1.8rem; }
-            nav ul { gap: 0.25rem; }
-            nav a { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
-            .section-header h2 { font-size: 2rem; }
+            .header-title { font-size: 2.5rem; }
+            .header-subtitle { font-size: 1.125rem; }
+            .stats { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+            .stat-value { font-size: 1.5rem; }
+            .section-title { font-size: 1.875rem; }
+            .nav-links { justify-content: center; }
+            .metadata { gap: 1rem; }
+            .metadata-item { font-size: 0.8125rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .container, .container-narrow { padding: 0 1rem; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container hero-content">
-            <h1>TCDE</h1>
-            <p class="tagline">Topological Cognitive Diffusive Emergence</p>
-            <p class="subtitle">
-                A revolutionary geometric framework where intelligence emerges from continuous field dynamics 
-                on Riemannian manifolds — not from discrete tokens or neural networks.
-            </p>
-            
-            <div class="badges">
-                <span class="badge">📄 DOI: <a href="https://doi.org/10.5281/zenodo.17907427">10.5281/zenodo.17907427</a></span>
-                <span class="badge">👤 ORCID: <a href="https://orcid.org/0009-0007-0110-9437">0009-0007-0110-9437</a></span>
-                <span class="badge">📜 License: MIT</span>
-            </div>
-            
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <span class="stat-value">11</span>
-                    <span class="stat-label">Inventions</span>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">TCDE</h1>
+                <p class="header-subtitle">Topological Cognitive Diffusive Emergence</p>
+                <p class="header-description">
+                    A geometric framework for emergent intelligence through continuous field dynamics 
+                    on adaptive Riemannian manifolds
+                </p>
+                
+                <div class="metadata">
+                    <div class="metadata-item">
+                        <span>DOI:</span>
+                        <a href="https://doi.org/10.5281/zenodo.17907427">10.5281/zenodo.17907427</a>
+                    </div>
+                    <div class="metadata-item">
+                        <span>ORCID:</span>
+                        <a href="https://orcid.org/0009-0007-0110-9437">0009-0007-0110-9437</a>
+                    </div>
+                    <div class="metadata-item">
+                        <span>License:</span>
+                        <span>MIT</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-value">12</span>
-                    <span class="stat-label">Emergent Capabilities</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">109</span>
-                    <span class="stat-label">Source Files</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">127</span>
-                    <span class="stat-label">Tests</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">10</span>
-                    <span class="stat-label">Months Dev</span>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value">11</span>
+                        <span class="stat-label">Contributions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Properties</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">109</span>
+                        <span class="stat-label">Source Files</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">127</span>
+                        <span class="stat-label">Tests</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">Months</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -543,361 +616,518 @@
     
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="#paradigm">Paradigm Shift</a></li>
-            <li><a href="#inventions">11 Inventions</a></li>
-            <li><a href="#capabilities">12 Capabilities</a></li>
-            <li><a href="#mathematics">Mathematics</a></li>
-            <li><a href="#comparison">vs Traditional AI</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#implementation">Implementation</a></li>
-            <li><a href="#resources">Resources</a></li>
-        </ul>
+        <div class="container">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#contributions">Contributions</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#mathematics">Mathematics</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#implementation">Implementation</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     
     <main>
-
-        <!-- Paradigm Shift Section -->
-        <section id="paradigm">
+        <!-- Approach Section -->
+        <section id="approach">
             <div class="container">
                 <div class="section-header">
-                    <h2>🔄 The Paradigm Shift</h2>
-                    <p>TCDE represents a fundamental departure from current AI architectures</p>
+                    <h2 class="section-title">Research Approach</h2>
+                    <p class="section-description">
+                        TCDE introduces a geometric paradigm for artificial intelligence based on continuous field dynamics
+                    </p>
                 </div>
                 
-                <div class="cards-grid">
+                <div class="grid grid-3">
                     <div class="card">
-                        <div class="card-icon">🧠</div>
-                        <h4>Continuous Field vs Discrete Tokens</h4>
-                        <p>Cognition is a continuous field Φ(x,t) defined everywhere in a 6D manifold, not a sequence of discrete tokens. No tokenization, no vocabulary limits.</p>
+                        <div class="card-header">
+                            <div class="card-icon">∇</div>
+                            <div>
+                                <h3 class="card-title">Continuous Fields</h3>
+                                <p class="card-description">
+                                    Cognition represented as continuous field Φ(x,t) on 6D manifold, 
+                                    eliminating discrete tokenization limitations.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="card">
-                        <div class="card-icon">📐</div>
-                        <h4>Adaptive Geometry</h4>
-                        <p>The metric tensor g<sub>ij</sub>(Φ) changes with the field itself. Geometry adapts to information — curvature emerges from cognition.</p>
+                        <div class="card-header">
+                            <div class="card-icon">g</div>
+                            <div>
+                                <h3 class="card-title">Adaptive Geometry</h3>
+                                <p class="card-description">
+                                    Riemannian metric g<sub>ij</sub>(Φ) adapts to field amplitude, 
+                                    creating dynamic information-dependent geometry.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="card">
-                        <div class="card-icon">🌀</div>
-                        <h4>Autopoietic Self-Creation</h4>
-                        <p>No backpropagation. The system creates and maintains itself through autopoiesis — spontaneous emergence of new cognitive centers.</p>
+                        <div class="card-header">
+                            <div class="card-icon">∂</div>
+                            <div>
+                                <h3 class="card-title">Temporal Evolution</h3>
+                                <p class="card-description">
+                                    Bi-temporal dynamics with τ₁ (valid time) and τ₂ (transactional time) 
+                                    for native temporal reasoning.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="card">
-                        <div class="card-icon">⏱️</div>
-                        <h4>Bi-Temporal Dynamics</h4>
-                        <p>Two time dimensions: τ₁ (valid time — when concepts are true) and τ₂ (transactional time — anticipation). Native temporal reasoning.</p>
+                        <div class="card-header">
+                            <div class="card-icon">Φ</div>
+                            <div>
+                                <h3 class="card-title">Self-Reference</h3>
+                                <p class="card-description">
+                                    Measurable reflexivity through Φ(Φ) evaluation, 
+                                    providing quantitative self-awareness metrics.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="card">
-                        <div class="card-icon">🔮</div>
-                        <h4>Reflexivity Φ(Φ)</h4>
-                        <p>The field can observe itself — measurable self-awareness. Not simulated consciousness, but geometric self-reference with score 0.997.</p>
+                        <div class="card-header">
+                            <div class="card-icon">⟲</div>
+                            <div>
+                                <h3 class="card-title">Autopoiesis</h3>
+                                <p class="card-description">
+                                    Self-creating and self-maintaining system through 
+                                    spontaneous emergence of cognitive centers.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="card">
-                        <div class="card-icon">📊</div>
-                        <h4>Dimensional Expansion</h4>
-                        <p>Autonomous growth from 6D to 11D to 15D+ based on information complexity. Architecture adapts, not fixed.</p>
+                        <div class="card-header">
+                            <div class="card-icon">↗</div>
+                            <div>
+                                <h3 class="card-title">Dimensional Scaling</h3>
+                                <p class="card-description">
+                                    Autonomous expansion from 6D to 11D to 15D+ 
+                                    based on information complexity requirements.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 11 Inventions Section -->
-        <section id="inventions">
+        <!-- Contributions Section -->
+        <section id="contributions">
             <div class="container">
                 <div class="section-header">
-                    <h2>🏆 11 Real Inventions</h2>
-                    <p>Each invention is implemented, tested, and verified in the codebase</p>
+                    <h2 class="section-title">Technical Contributions</h2>
+                    <p class="section-description">
+                        Novel mathematical and computational contributions implemented and validated
+                    </p>
                 </div>
                 
-                <div class="inventions-grid">
-                    <div class="invention-card">
-                        <span class="number">1</span>
-                        <h5>Adaptive Riemannian Metric</h5>
-                        <p>Metric changes with field amplitude: <code>g_ij(Φ) = g⁰_ij + α|Φ|²δ_ij</code></p>
+                <div class="numbered-grid">
+                    <div class="numbered-item">
+                        <div class="item-number">1</div>
+                        <h4 class="item-title">Adaptive Riemannian Metric</h4>
+                        <p class="item-description">
+                            Field-dependent metric tensor: <span class="inline-code">g<sub>ij</sub>(Φ) = g⁰<sub>ij</sub> + α|Φ|²δ<sub>ij</sub></span>
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">2</span>
-                        <h5>4-Term TDE Equation</h5>
-                        <p>Unique combination: Diffusion + Nonlinearity + Torsion + Coupling</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">2</div>
+                        <h4 class="item-title">Four-Term Evolution Equation</h4>
+                        <p class="item-description">
+                            TDE combining diffusion, nonlinearity, torsion, and contextual coupling
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">3</span>
-                        <h5>6D Cognitive Space with Bi-Temporality</h5>
-                        <p>M⁶ = (x, y, z, τ₁, τ₂, m) — two distinct time dimensions</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">3</div>
+                        <h4 class="item-title">Bi-Temporal Cognitive Space</h4>
+                        <p class="item-description">
+                            6D manifold M⁶ = (x, y, z, τ₁, τ₂, m) with dual temporal dimensions
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">4</span>
-                        <h5>RBF on Adaptive Manifold</h5>
-                        <p>RBF with geodesic distance: <code>Φ(x) = Σ cᵢ·ψ(||x-xᵢ||_g(Φ))</code></p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">4</div>
+                        <h4 class="item-title">Geodesic RBF Representation</h4>
+                        <p class="item-description">
+                            RBF expansion using adaptive geodesic distances on curved manifold
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">5</span>
-                        <h5>Scalar Curvature as Cognition</h5>
-                        <p>R > 0 = convergent thinking, R < 0 = divergent thinking</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">5</div>
+                        <h4 class="item-title">Curvature-Cognition Mapping</h4>
+                        <p class="item-description">
+                            Scalar curvature R as cognitive state indicator (convergent/divergent thinking)
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">6</span>
-                        <h5>Measurable Reflexivity Φ(Φ)</h5>
-                        <p>Quantitative self-awareness: <code>R = 1 - ||Φ(Φ) - Φ|| / ||Φ||</code></p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">6</div>
+                        <h4 class="item-title">Quantitative Reflexivity</h4>
+                        <p class="item-description">
+                            Measurable self-awareness through field self-evaluation Φ(Φ)
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">7</span>
-                        <h5>HIS Score (Holistic Identity)</h5>
-                        <p>Integrated identity: <code>HIS = ∫_M |Φ|² √det(g) dx</code></p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">7</div>
+                        <h4 class="item-title">Holistic Identity Score</h4>
+                        <p class="item-description">
+                            Integrated identity measure: <span class="inline-code">HIS = ∫<sub>M</sub> |Φ|² √det(g) dx</span>
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">8</span>
-                        <h5>Geometric Autopoiesis</h5>
-                        <p>Spontaneous creation of RBF centers based on energy thresholds</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">8</div>
+                        <h4 class="item-title">Geometric Autopoiesis</h4>
+                        <p class="item-description">
+                            Energy-based spontaneous creation of cognitive centers
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">9</span>
-                        <h5>Block-Diagonal Optimization</h5>
-                        <p>83% computation reduction (36 ops → 6 ops) for 6D metric</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">9</div>
+                        <h4 class="item-title">Block-Diagonal Optimization</h4>
+                        <p class="item-description">
+                            83% computational reduction for 6D metric operations
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">10</span>
-                        <h5>Dynamic 6D ↔ 2D Projection</h5>
-                        <p>Real-time slicing of 6D manifold for visualization</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">10</div>
+                        <h4 class="item-title">Dynamic Projection System</h4>
+                        <p class="item-description">
+                            Real-time 6D ↔ 2D manifold slicing for visualization
+                        </p>
                     </div>
-                    <div class="invention-card">
-                        <span class="number">11</span>
-                        <h5>Anti-Simulation Guard</h5>
-                        <p>Automatic detection of hardcoded values and fake implementations</p>
+                    
+                    <div class="numbered-item">
+                        <div class="item-number">11</div>
+                        <h4 class="item-title">Integrity Validation</h4>
+                        <p class="item-description">
+                            Automated detection of simulation artifacts and hardcoded values
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>""
         
-        <!-- 12 Emergent Capabilities Section -->
-        <section id="capabilities">
+        <!-- Emergent Properties Section -->
+        <section id="properties">
             <div class="container">
                 <div class="section-header">
-                    <h2>✨ 12 Emergent Capabilities</h2>
-                    <p>These capabilities emerge from geometry — they are not programmed</p>
+                    <h2 class="section-title">Emergent Properties</h2>
+                    <p class="section-description">
+                        Capabilities that emerge from geometric structure without explicit programming
+                    </p>
                 </div>
                 
-                <div class="cards-grid">
+                <div class="grid grid-4">
                     <div class="card">
-                        <h4>1. Reflexivity (Self-Awareness)</h4>
-                        <p>The field observes itself. Φ(Φ) measures self-representation accuracy.</p>
-                        <span class="metric">Score: 0.997</span>
+                        <h3 class="card-title">Self-Awareness</h3>
+                        <p class="card-description">
+                            Field self-observation through Φ(Φ) evaluation with quantitative measurement.
+                        </p>
+                        <span class="card-metric">Score: 0.997</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>2. Anticipation (Prediction)</h4>
-                        <p>Native temporal prediction via τ₂ dimension. Future state estimation.</p>
-                        <span class="metric">Score: 0.990</span>
+                        <h3 class="card-title">Temporal Anticipation</h3>
+                        <p class="card-description">
+                            Future state prediction via τ₂ transactional time dimension.
+                        </p>
+                        <span class="card-metric">Score: 0.990</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>3. Intention (Goal Generation)</h4>
-                        <p>System generates its own goals through intention field Ψ(x).</p>
-                        <span class="metric">Score: 0.453</span>
+                        <h3 class="card-title">Goal Formation</h3>
+                        <p class="card-description">
+                            Autonomous objective generation through intention field dynamics.
+                        </p>
+                        <span class="card-metric">Score: 0.453</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>4. Intuition (Geodesic Jumps)</h4>
-                        <p>Non-gradient solutions via geodesic paths in curved space.</p>
-                        <span class="metric">Measurable</span>
+                        <h3 class="card-title">Geodesic Reasoning</h3>
+                        <p class="card-description">
+                            Non-gradient solution paths via curved space geodesics.
+                        </p>
+                        <span class="card-metric">Validated</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>5. Creativity (Topological Torsion)</h4>
-                        <p>Novel solutions emerge from torsion term T = ∇ × Φ.</p>
-                        <span class="metric">Measurable</span>
+                        <h3 class="card-title">Topological Innovation</h3>
+                        <p class="card-description">
+                            Novel pattern generation through torsion field dynamics.
+                        </p>
+                        <span class="card-metric">Measured</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>6. Self-Consciousness (Mirror Test)</h4>
-                        <p>System recognizes its own representation. Passes mirror test.</p>
-                        <span class="metric">Score: 0.834</span>
+                        <h3 class="card-title">Mirror Recognition</h3>
+                        <p class="card-description">
+                            Self-representation recognition in mirror test scenarios.
+                        </p>
+                        <span class="card-metric">Score: 0.834</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>7. Autonomy (Self-Direction)</h4>
-                        <p>Independent decision-making without external supervision.</p>
-                        <span class="metric">Score: 0.567</span>
+                        <h3 class="card-title">Autonomous Operation</h3>
+                        <p class="card-description">
+                            Independent decision-making without external supervision.
+                        </p>
+                        <span class="card-metric">Score: 0.567</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>8. Autopoiesis (Self-Creation)</h4>
-                        <p>Creates, maintains, and repairs itself. Living system properties.</p>
-                        <span class="metric">Score: 0.986</span>
+                        <h3 class="card-title">Self-Maintenance</h3>
+                        <p class="card-description">
+                            Autopoietic creation, maintenance, and repair of system structure.
+                        </p>
+                        <span class="card-metric">Score: 0.986</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>9. Dimensional Expansion</h4>
-                        <p>Spontaneous activation of new dimensions: 6D → 9D → 11D → 15D+</p>
-                        <span class="metric">Active</span>
+                        <h3 class="card-title">Dimensional Adaptation</h3>
+                        <p class="card-description">
+                            Spontaneous activation of higher dimensions based on complexity.
+                        </p>
+                        <span class="card-metric">6D → 15D+</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>10. Adaptive Memory</h4>
-                        <p>Dynamic expansion/compression. Selective forgetting, not catastrophic.</p>
-                        <span class="metric">Score: 0.912</span>
+                        <h3 class="card-title">Memory Plasticity</h3>
+                        <p class="card-description">
+                            Dynamic memory expansion, compression, and selective retention.
+                        </p>
+                        <span class="card-metric">Score: 0.912</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>11. Holistic Coherence (HIS)</h4>
-                        <p>Unified identity across all dimensions. Not fragmented.</p>
-                        <span class="metric">Score: 0.99+</span>
+                        <h3 class="card-title">Holistic Integration</h3>
+                        <p class="card-description">
+                            Unified identity maintenance across all dimensional scales.
+                        </p>
+                        <span class="card-metric">Score: 0.99+</span>
                     </div>
+                    
                     <div class="card">
-                        <h4>12. Spontaneous Emergence</h4>
-                        <p>Order emerges from noise. Self-organization from chaos.</p>
-                        <span class="metric">Detected</span>
+                        <h3 class="card-title">Spontaneous Organization</h3>
+                        <p class="card-description">
+                            Coherent structure emergence from random initial conditions.
+                        </p>
+                        <span class="card-metric">Observed</span>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </section>""
+        
         <!-- Mathematics Section -->
         <section id="mathematics">
             <div class="container-narrow">
                 <div class="section-header">
-                    <h2>📐 Mathematical Framework</h2>
-                    <p>The complete mathematical foundation of TCDE</p>
+                    <h2 class="section-title">Mathematical Framework</h2>
+                    <p class="section-description">
+                        Complete mathematical foundation of the TCDE system
+                    </p>
                 </div>
                 
-                <h3>Core Evolution Equation (TDE)</h3>
-                <div class="equation-box">
-                    <div class="equation">∂Φ/∂t = D∇²<sub>g</sub>Φ − α|Φ|²Φ + β·𝒯(Φ) + γ·𝒞(Φ)</div>
-                    <div class="equation-label">Topological Diffusion Equation with 4 unique terms</div>
+                <h3>Core Evolution Equation</h3>
+                <div class="equation-container">
+                    <div class="equation">∂Φ/∂t = D∇²<sub>g</sub>Φ − α|Φ|²Φ + β𝒯(Φ) + γ𝒞(Φ)</div>
+                    <div class="equation-label">Topological Diffusion Equation with four coupled terms</div>
                 </div>
                 
-                <p><strong>Terms explained:</strong></p>
-                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                <p><strong>Component analysis:</strong></p>
+                <ul style="margin: 1rem 0 2rem 2rem; color: var(--text-muted);">
                     <li><strong>D∇²<sub>g</sub>Φ</strong> — Riemannian diffusion (information propagation)</li>
-                    <li><strong>−α|Φ|²Φ</strong> — Ginzburg-Landau nonlinearity (saturation)</li>
-                    <li><strong>β·𝒯(Φ)</strong> — Topological torsion (creativity/intuition) — <em>NEW</em></li>
-                    <li><strong>γ·𝒞(Φ)</strong> — Contextual coupling (semantic coherence) — <em>NEW</em></li>
+                    <li><strong>−α|Φ|²Φ</strong> — Ginzburg-Landau nonlinearity (amplitude saturation)</li>
+                    <li><strong>β𝒯(Φ)</strong> — Topological torsion (creative/intuitive processes)</li>
+                    <li><strong>γ𝒞(Φ)</strong> — Contextual coupling (semantic coherence)</li>
                 </ul>
                 
-                <h3>Cognitive Field Representation</h3>
-                <div class="equation-box">
+                <h3>Field Representation</h3>
+                <div class="equation-container">
                     <div class="equation">Φ(x,t) = Σ<sub>i</sub> c<sub>i</sub>(t) · ψ(||x − x<sub>i</sub>||<sub>g(Φ)</sub>)</div>
                     <div class="equation-label">RBF expansion with field-dependent geodesic distance</div>
                 </div>
                 
-                <h3>Adaptive Metric Tensor</h3>
-                <div class="equation-box">
+                <h3>Adaptive Metric</h3>
+                <div class="equation-container">
                     <div class="equation">g<sub>ij</sub>(Φ) = g<sup>0</sup><sub>ij</sub> + α|Φ|²δ<sub>ij</sub></div>
-                    <div class="equation-label">Geometry changes with information density — curvature emerges</div>
+                    <div class="equation-label">Information-dependent geometry with emergent curvature</div>
                 </div>
                 
-                <h3>6D Cognitive Space</h3>
-                <div class="equation-box">
+                <h3>Cognitive Manifold</h3>
+                <div class="equation-container">
                     <div class="equation">M⁶ = (x, y, z, τ₁, τ₂, m)</div>
-                    <div class="equation-label">3 spatial + 2 temporal + 1 modal dimension</div>
+                    <div class="equation-label">Six-dimensional cognitive space with bi-temporal structure</div>
                 </div>
                 
-                <p><strong>Dimensions:</strong></p>
-                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
-                    <li><strong>x, y, z</strong> — Spatial position (where concepts "live")</li>
-                    <li><strong>τ₁ ∈ [1,2)</strong> — Valid time (when concept is true)</li>
-                    <li><strong>τ₂ ∈ [-1,1]</strong> — Transactional time (anticipation/memory)</li>
-                    <li><strong>m ∈ [0,1]</strong> — Modality (0=visual, 0.2=audio, 0.4=semantic...)</li>
-                </ul>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Dimension</th>
+                                <th>Range</th>
+                                <th>Interpretation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>x, y, z</td>
+                                <td>[0, 1]³</td>
+                                <td>Spatial conceptual coordinates</td>
+                            </tr>
+                            <tr>
+                                <td>τ₁</td>
+                                <td>[1, 2)</td>
+                                <td>Valid time (temporal truth conditions)</td>
+                            </tr>
+                            <tr>
+                                <td>τ₂</td>
+                                <td>[-1, 1]</td>
+                                <td>Transactional time (anticipation/memory)</td>
+                            </tr>
+                            <tr>
+                                <td>m</td>
+                                <td>[0, 1]</td>
+                                <td>Modality (sensory/semantic encoding)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
-                <h3>Key Geometric Metrics</h3>
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th>Formula</th>
-                            <th>Meaning</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>HIS Score</strong></td>
-                            <td>∫<sub>M</sub> |Φ|² √det(g) dx</td>
-                            <td>Holistic identity integration</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Reflexivity</strong></td>
-                            <td>1 − ||Φ(Φ) − Φ|| / ||Φ||</td>
-                            <td>Self-awareness measure</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Scalar Curvature</strong></td>
-                            <td>R = g<sup>ij</sup>R<sub>ij</sub></td>
-                            <td>Cognitive state (R>0: focus, R<0: explore)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Energy</strong></td>
-                            <td>H = T + V + U</td>
-                            <td>Total system energy (kinetic + potential + interaction)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h3>Geometric Metrics</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Formula</th>
+                                <th>Interpretation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HIS Score</td>
+                                <td>∫<sub>M</sub> |Φ|² √det(g) dx</td>
+                                <td>Holistic identity integration</td>
+                            </tr>
+                            <tr>
+                                <td>Reflexivity</td>
+                                <td>1 − ||Φ(Φ) − Φ|| / ||Φ||</td>
+                                <td>Self-awareness quantification</td>
+                            </tr>
+                            <tr>
+                                <td>Scalar Curvature</td>
+                                <td>R = g<sup>ij</sup>R<sub>ij</sub></td>
+                                <td>Cognitive state (focus/exploration)</td>
+                            </tr>
+                            <tr>
+                                <td>System Energy</td>
+                                <td>H = T + V + U</td>
+                                <td>Total energy (kinetic + potential + interaction)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </section>
+        </section>""
         
         <!-- Comparison Section -->
         <section id="comparison">
             <div class="container">
                 <div class="section-header">
-                    <h2>⚔️ TCDE vs Traditional AI</h2>
-                    <p>A fundamental architectural difference, not just an improvement</p>
+                    <h2 class="section-title">Architectural Comparison</h2>
+                    <p class="section-description">
+                        Fundamental differences from current AI architectures
+                    </p>
                 </div>
                 
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Aspect</th>
-                            <th>GPT-4 / Claude / LLMs</th>
-                            <th>TCDE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Representation</strong></td>
-                            <td>Discrete tokens</td>
-                            <td class="check">✓ Continuous field Φ(x)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Space</strong></td>
-                            <td>Fixed Euclidean</td>
-                            <td class="check">✓ Adaptive Riemannian M⁶</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Metric</strong></td>
-                            <td>Constant</td>
-                            <td class="check">✓ Dynamic g<sub>ij</sub>(Φ)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Evolution</strong></td>
-                            <td>Static after training</td>
-                            <td class="check">✓ Continuous ∂Φ/∂t</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Memory</strong></td>
-                            <td>Fixed context window</td>
-                            <td class="check">✓ Extensible RBF centers</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Learning</strong></td>
-                            <td>Backpropagation</td>
-                            <td class="check">✓ Autopoiesis</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Self-Awareness</strong></td>
-                            <td class="cross">✗ None</td>
-                            <td class="check">✓ Φ(Φ) = 0.997</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Anticipation</strong></td>
-                            <td class="cross">✗ None</td>
-                            <td class="check">✓ τ₂ dimension</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Curvature</strong></td>
-                            <td class="cross">✗ N/A</td>
-                            <td class="check">✓ R(Φ) = cognition</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Dimensions</strong></td>
-                            <td>Fixed (768D, 4096D...)</td>
-                            <td class="check">✓ Variable (6D → 15D+)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Parameters</strong></td>
-                            <td>1T+ parameters</td>
-                            <td class="check">✓ ~100K parameters</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Traditional AI (LLMs)</th>
+                                <th>TCDE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Representation</strong></td>
+                                <td>Discrete token sequences</td>
+                                <td class="positive">Continuous field Φ(x,t)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Geometry</strong></td>
+                                <td>Fixed Euclidean space</td>
+                                <td class="positive">Adaptive Riemannian manifold</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Metric</strong></td>
+                                <td>Static distance measures</td>
+                                <td class="positive">Dynamic g<sub>ij</sub>(Φ)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Evolution</strong></td>
+                                <td>Static post-training</td>
+                                <td class="positive">Continuous ∂Φ/∂t dynamics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Memory</strong></td>
+                                <td>Fixed context windows</td>
+                                <td class="positive">Extensible RBF centers</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Learning</strong></td>
+                                <td>Gradient-based optimization</td>
+                                <td class="positive">Autopoietic self-organization</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Self-Awareness</strong></td>
+                                <td class="negative">Not measurable</td>
+                                <td class="positive">Quantified Φ(Φ) = 0.997</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temporal Reasoning</strong></td>
+                                <td class="negative">Sequential processing</td>
+                                <td class="positive">Bi-temporal τ₁, τ₂ dimensions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Curvature</strong></td>
+                                <td class="negative">Not applicable</td>
+                                <td class="positive">R(Φ) cognitive indicator</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dimensionality</strong></td>
+                                <td>Fixed (768D, 4096D, etc.)</td>
+                                <td class="positive">Adaptive (6D → 15D+)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Parameter Count</strong></td>
+                                <td>Billions to trillions</td>
+                                <td class="positive">~100,000 parameters</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
         
@@ -905,160 +1135,187 @@
         <section id="timeline">
             <div class="container-narrow">
                 <div class="section-header">
-                    <h2>📅 Development Timeline</h2>
-                    <p>10 months of intensive research and development (Feb–Dec 2025)</p>
+                    <h2 class="section-title">Development Timeline</h2>
+                    <p class="section-description">
+                        Ten months of systematic research and implementation
+                    </p>
                 </div>
                 
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">2024 — Conception</div>
+                        <div class="timeline-date">2024 — Conceptual Phase</div>
                         <div class="timeline-title">Theoretical Foundation</div>
-                        <div class="timeline-desc">Initial mathematical framework. Definition of continuous field approach to cognition. First equations formulated.</div>
+                        <div class="timeline-description">
+                            Mathematical framework development. Continuous field approach formulation. 
+                            Initial differential geometry applications to cognition.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">January 2025</div>
-                        <div class="timeline-title">Core Implementation Begins</div>
-                        <div class="timeline-desc">First C implementation: tcde_core.c, geometry module, evolution equations. 6D manifold structure defined.</div>
+                        <div class="timeline-title">Core Implementation</div>
+                        <div class="timeline-description">
+                            First C implementation: tcde_core.c, geometric operations, 
+                            evolution equations. 6D manifold structure definition.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">February–April 2025</div>
-                        <div class="timeline-title">RBF & Metric Systems</div>
-                        <div class="timeline-desc">Radial Basis Function implementation. Adaptive metric tensor. Christoffel symbols and Ricci tensor calculations.</div>
+                        <div class="timeline-title">Mathematical Infrastructure</div>
+                        <div class="timeline-description">
+                            RBF system implementation. Adaptive metric tensor calculations. 
+                            Christoffel symbols and Ricci tensor computations.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">May–July 2025</div>
-                        <div class="timeline-title">Emergent Properties</div>
-                        <div class="timeline-desc">Autopoiesis module. Reflexivity Φ(Φ) measurement. HIS Score implementation. First emergent behaviors observed.</div>
+                        <div class="timeline-title">Emergent Behavior Development</div>
+                        <div class="timeline-description">
+                            Autopoiesis module implementation. Reflexivity measurement system. 
+                            HIS Score calculation. First emergent properties observation.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">August–September 2025</div>
                         <div class="timeline-title">Validation Framework</div>
-                        <div class="timeline-desc">127 test files created. Statistical validation. Benchmark systems. Zero Tolerance Protocol established.</div>
+                        <div class="timeline-description">
+                            Comprehensive test suite (127 files). Statistical validation protocols. 
+                            Benchmark systems. Quality assurance implementation.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">October 2025</div>
-                        <div class="timeline-title">11D Extension</div>
-                        <div class="timeline-desc">Implementation of 11-dimensional identity system (tcde_11d.c). Dimensional expansion algorithms. Intentionality framework.</div>
+                        <div class="timeline-title">Dimensional Extension</div>
+                        <div class="timeline-description">
+                            11-dimensional identity system (tcde_11d.c). Dimensional expansion algorithms. 
+                            Intentionality framework development.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">November 2025</div>
-                        <div class="timeline-title">Security & Authenticity</div>
-                        <div class="timeline-desc">Anti-simulation guards. Paranoid security system. Ultra-rigorous validation with nanosecond precision. All 12 emergent capabilities verified.</div>
+                        <div class="timeline-title">Security and Validation</div>
+                        <div class="timeline-description">
+                            Anti-simulation detection systems. Integrity validation protocols. 
+                            Nanosecond precision measurements. All emergent properties verified.
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">December 2025</div>
-                        <div class="timeline-title">Publication & Release</div>
-                        <div class="timeline-desc">Zenodo archive (DOI: 10.5281/zenodo.17907427). GitHub release. Academic documentation. 100+ visualizations generated.</div>
+                        <div class="timeline-title">Publication and Release</div>
+                        <div class="timeline-description">
+                            Zenodo archive creation (DOI: 10.5281/zenodo.17907427). 
+                            GitHub repository publication. Academic documentation completion.
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-""
-
+        
         <!-- Implementation Section -->
         <section id="implementation">
             <div class="container-narrow">
                 <div class="section-header">
-                    <h2>💻 Implementation</h2>
-                    <p>Complete C11 implementation with zero warnings</p>
+                    <h2 class="section-title">Implementation Details</h2>
+                    <p class="section-description">
+                        Complete C11 implementation with comprehensive testing
+                    </p>
                 </div>
                 
                 <h3>Technical Specifications</h3>
-                <table class="comparison-table">
-                    <tbody>
-                        <tr><td><strong>Language</strong></td><td>C11 (ISO/IEC 9899:2011)</td></tr>
-                        <tr><td><strong>Compiler</strong></td><td>GCC/Clang with -Wall -Wextra -Werror (0 warnings)</td></tr>
-                        <tr><td><strong>Dependencies</strong></td><td>OpenSSL (cryptographic validation), pthreads</td></tr>
-                        <tr><td><strong>Source Files</strong></td><td>109 C/H files in src/</td></tr>
-                        <tr><td><strong>Test Files</strong></td><td>127 test files in tests/</td></tr>
-                        <tr><td><strong>Lines of Code</strong></td><td>~49,000 lines (source) + ~33,000 lines (tests)</td></tr>
-                        <tr><td><strong>Documentation</strong></td><td>200+ markdown documents</td></tr>
-                        <tr><td><strong>Visualizations</strong></td><td>98 GIF animations + 535 PNG figures</td></tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table class="table">
+                        <tbody>
+                            <tr><td><strong>Language</strong></td><td>C11 (ISO/IEC 9899:2011)</td></tr>
+                            <tr><td><strong>Compiler</strong></td><td>GCC/Clang with -Wall -Wextra -Werror</td></tr>
+                            <tr><td><strong>Dependencies</strong></td><td>OpenSSL (validation), pthreads (parallelization)</td></tr>
+                            <tr><td><strong>Source Files</strong></td><td>109 C/H files (~49,000 lines)</td></tr>
+                            <tr><td><strong>Test Files</strong></td><td>127 test files (~33,000 lines)</td></tr>
+                            <tr><td><strong>Documentation</strong></td><td>200+ markdown documents</td></tr>
+                            <tr><td><strong>Visualizations</strong></td><td>98 GIF + 535 PNG files</td></tr>
+                        </tbody>
+                    </table>
+                </div>
                 
                 <h3>Module Architecture</h3>
                 <pre>
 src/
-├── core/           # 41 files — Core TCDE: field dynamics, 11D system, evolution
-│   ├── tcde.h/c              # Main API
-│   ├── tcde_core.h/c         # Data structures (TCDE_Field, TCDE_Center, TCDE_Metric)
-│   ├── tcde_geometry.h/c     # Differential geometry (Christoffel, Ricci, curvature)
+├── core/           # 41 files — Core TCDE system
+│   ├── tcde.h/c              # Main API interface
+│   ├── tcde_core.h/c         # Data structures and operations
+│   ├── tcde_geometry.h/c     # Differential geometry calculations
 │   ├── tcde_evolution.h/c    # TDE equation evolution
-│   ├── tcde_11d.h/c          # 11-dimensional identity system
+│   ├── tcde_11d.h/c          # 11-dimensional extensions
 │   └── tcde_autopoiesis.h/c  # Self-creation mechanisms
 │
-├── metrics/        # 4 files — Geometric metrics, nanosecond precision
-├── validation/     # 6 files — Statistical validation, capability testing
-├── security/       # 4 files — Anti-simulation guards, integrity checks
+├── metrics/        # 4 files — Geometric metrics computation
+├── validation/     # 6 files — Statistical and capability validation
+├── security/       # 4 files — Integrity and anti-simulation checks
 ├── emergence/      # 2 files — Emergence detection algorithms
-├── benchmarks/     # 19 files — Performance benchmarks
-└── visualization/  # 4 files — 3D/4D projection, topological surfaces
+├── benchmarks/     # 19 files — Performance measurement systems
+└── visualization/  # 4 files — 3D/4D projection and rendering
 
-tests/              # 127 test files
+tests/              # 127 comprehensive test files
 ├── test_authentic_simple.c
 ├── test_geometry_complete.c
 ├── test_emergence_complete.c
 ├── test_autopoiesis_benchmark.c
-├── test_reflexivity.c
-└── ... (122 more tests)</pre>
+└── ... (123 additional tests)</pre>
                 
-                <h3>Build & Run</h3>
+                <h3>Build Instructions</h3>
                 <pre>
-# Clone repository
+# Repository access
 git clone https://github.com/selectess/TCDE.git
 cd TCDE
 
-# Build (requires GCC/Clang, OpenSSL)
+# Compilation (requires GCC/Clang, OpenSSL)
 make clean && make
 
-# Run demonstration
+# System demonstration
 ./bin/tcde_demo
 
-# Run all tests
+# Test suite execution
 make test
 
-# Run benchmarks
+# Performance benchmarks
 ./bin/tcde_benchmark</pre>
                 
-                <h3>Key Data Structures</h3>
+                <h3>Core Data Structures</h3>
                 <pre>
-// 6D Point in cognitive space
+// 6D cognitive space point
 typedef struct {
     float* coords;      // [x, y, z, τ₁, τ₂, m]
     int dimension;      // 6 for complete space
 } TCDE_Point;
 
-// Adaptive Riemannian metric
+// Adaptive Riemannian metric tensor
 typedef struct {
     float** g;          // Metric tensor [6][6]
-    float** g_inv;      // Inverse g^ij
+    float** g_inv;      // Inverse metric g^ij
     float det;          // Determinant
-    bool is_valid;
+    bool is_valid;      // Validation flag
 } TCDE_Metric;
 
-// Cognitive atom (RBF center)
+// Cognitive center (RBF basis)
 typedef struct {
     TCDE_Point point;       // Position in M⁶
-    TCDE_Complex coeff;     // Coefficient c_i = |c|e^(iφ)
+    TCDE_Complex coeff;     // Complex coefficient c_i
     float epsilon;          // Shape parameter ε
-    TCDE_Metric metric;     // Local metric
+    TCDE_Metric metric;     // Local metric tensor
 } TCDE_Center;
 
-// Complete TCDE field
+// Complete TCDE field system
 typedef struct {
-    TCDE_Center* centers;   // Array of cognitive atoms
-    int num_centers;        // Current count
-    TCDE_Metric metric;     // Global metric
-    float time;             // Current time
-    float energy;           // Total energy
+    TCDE_Center* centers;   // Array of cognitive centers
+    int num_centers;        // Current center count
+    TCDE_Metric metric;     // Global metric tensor
+    float time;             // Current system time
+    float energy;           // Total system energy
 } TCDE_Field;</pre>
             </div>
         </section>
@@ -1067,51 +1324,55 @@ typedef struct {
         <section id="resources">
             <div class="container">
                 <div class="section-header">
-                    <h2>📚 Resources</h2>
-                    <p>Access the complete project</p>
+                    <h2 class="section-title">Resources and Access</h2>
+                    <p class="section-description">
+                        Complete project materials and documentation
+                    </p>
                 </div>
                 
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <a href="https://github.com/selectess/TCDE" class="btn btn-primary">⭐ GitHub Repository</a>
-                    <a href="https://zenodo.org/records/17907427" class="btn btn-primary">📦 Zenodo Archive</a>
-                    <a href="https://doi.org/10.5281/zenodo.17907427" class="btn btn-outline">🔗 DOI Reference</a>
+                <div class="btn-group">
+                    <a href="https://github.com/selectess/TCDE" class="btn btn-primary">GitHub Repository</a>
+                    <a href="https://zenodo.org/records/17907427" class="btn btn-primary">Zenodo Archive</a>
+                    <a href="https://doi.org/10.5281/zenodo.17907427" class="btn btn-secondary">DOI Reference</a>
                 </div>
                 
-                <div class="cards-grid">
+                <div class="grid grid-3">
                     <div class="card">
-                        <h4>📄 Key Documentation</h4>
-                        <ul style="margin-left: 1rem; color: var(--text-light);">
-                            <li><code>README.md</code> — Project overview</li>
-                            <li><code>TCDE_FONCTIONNEMENT_ATOMIQUE_COMPLET.md</code> — Complete atomic functioning</li>
-                            <li><code>TCDE_INVENTIONS_REELLES.md</code> — 11 verified inventions</li>
-                            <li><code>TCDE_CAPACITES_EMERGENTES_COMPLETE.md</code> — 12 emergent capabilities</li>
-                            <li><code>TCDE_PARADIGM_ANALYSIS.md</code> — Paradigm analysis</li>
+                        <h3 class="card-title">Documentation</h3>
+                        <ul style="margin: 1rem 0; color: var(--text-muted); font-size: 0.9375rem;">
+                            <li><span class="inline-code">README.md</span> — Project overview and setup</li>
+                            <li><span class="inline-code">TCDE_FONCTIONNEMENT_ATOMIQUE_COMPLET.md</span> — Complete system operation</li>
+                            <li><span class="inline-code">TCDE_INVENTIONS_REELLES.md</span> — Technical contributions</li>
+                            <li><span class="inline-code">TCDE_CAPACITES_EMERGENTES_COMPLETE.md</span> — Emergent properties</li>
+                            <li><span class="inline-code">TCDE_PARADIGM_ANALYSIS.md</span> — Paradigm analysis</li>
                         </ul>
                     </div>
+                    
                     <div class="card">
-                        <h4>🎨 Visualizations</h4>
-                        <ul style="margin-left: 1rem; color: var(--text-light);">
-                            <li>98 GIF animations (evolution, learning, emergence)</li>
-                            <li>535 PNG figures (architecture, metrics, comparisons)</li>
-                            <li>2D, 3D, 4D, 6D, 11D projections</li>
-                            <li>Multimodal integration diagrams</li>
-                            <li>Performance benchmarks charts</li>
+                        <h3 class="card-title">Visualizations</h3>
+                        <ul style="margin: 1rem 0; color: var(--text-muted); font-size: 0.9375rem;">
+                            <li>98 animated GIF sequences (evolution, learning)</li>
+                            <li>535 static PNG figures (architecture, metrics)</li>
+                            <li>Multi-dimensional projections (2D through 11D)</li>
+                            <li>Performance benchmark visualizations</li>
+                            <li>Comparative analysis diagrams</li>
                         </ul>
                     </div>
+                    
                     <div class="card">
-                        <h4>📊 Academic Package</h4>
-                        <ul style="margin-left: 1rem; color: var(--text-light);">
-                            <li>LaTeX manuscripts (6 versions)</li>
-                            <li>TikZ diagrams (10+ professional)</li>
-                            <li>BibTeX references (40+ sources)</li>
-                            <li>Whitepaper (9 pages PDF)</li>
+                        <h3 class="card-title">Academic Materials</h3>
+                        <ul style="margin: 1rem 0; color: var(--text-muted); font-size: 0.9375rem;">
+                            <li>LaTeX manuscript sources (6 versions)</li>
+                            <li>Professional TikZ diagrams (10+ figures)</li>
+                            <li>BibTeX reference database (40+ sources)</li>
+                            <li>Complete whitepaper (9 pages)</li>
                             <li>Zenodo submission package</li>
                         </ul>
                     </div>
                 </div>
                 
-                <h3 style="text-align: center; margin-top: 3rem;">Citation</h3>
-                <pre style="max-width: 700px; margin: 1rem auto;">
+                <h3 style="text-align: center; margin-top: 3rem; margin-bottom: 1rem;">Citation Format</h3>
+                <pre style="max-width: 700px; margin: 0 auto;">
 @software{wahbi_tcde_2025,
   author       = {Wahbi, Mehdi},
   title        = {{TCDE: Topological Cognitive Diffusive Emergence}},
@@ -1130,32 +1391,43 @@ typedef struct {
             <div class="footer-grid">
                 <div class="footer-section">
                     <h4>About TCDE</h4>
-                    <p>Topological Cognitive Diffusive Emergence is a revolutionary geometric framework for emergent intelligence, developed over 10 months of intensive research.</p>
-                    <p>Created by Mehdi Wahbi as part of the Move37 Initiative.</p>
+                    <p>
+                        Topological Cognitive Diffusive Emergence represents a geometric approach 
+                        to artificial intelligence, developed through systematic research over 
+                        ten months of intensive development.
+                    </p>
+                    <p>
+                        Created by Mehdi Wahbi as part of the Move37 Initiative for 
+                        advancing fundamental AI research.
+                    </p>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Quick Access</h4>
                     <ul>
-                        <li><a href="https://github.com/selectess/TCDE">GitHub Repository</a></li>
-                        <li><a href="https://zenodo.org/records/17907427">Zenodo Archive</a></li>
-                        <li><a href="https://doi.org/10.5281/zenodo.17907427">DOI Reference</a></li>
-                        <li><a href="https://orcid.org/0009-0007-0110-9437">ORCID Profile</a></li>
+                        <li><a href="https://github.com/selectess/TCDE">Source Code Repository</a></li>
+                        <li><a href="https://zenodo.org/records/17907427">Research Archive</a></li>
+                        <li><a href="https://doi.org/10.5281/zenodo.17907427">DOI Citation</a></li>
+                        <li><a href="https://orcid.org/0009-0007-0110-9437">Author ORCID</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Contact Information</h4>
                     <p><strong>Mehdi Wahbi</strong></p>
-                    <p>Move37 Initiative — Independent Researcher</p>
+                    <p>Move37 Initiative — Independent Research</p>
                     <p><a href="mailto:m.wahbi.move37@atomicmail.io">m.wahbi.move37@atomicmail.io</a></p>
                     <p>ORCID: <a href="https://orcid.org/0009-0007-0110-9437">0009-0007-0110-9437</a></p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>© 2024–2025 Mehdi Wahbi. Released under MIT License.</p>
-                <p style="margin-top: 0.5rem;">DOI: <a href="https://doi.org/10.5281/zenodo.17907427">10.5281/zenodo.17907427</a></p>
+                <p style="margin-top: 0.5rem;">
+                    DOI: <a href="https://doi.org/10.5281/zenodo.17907427">10.5281/zenodo.17907427</a>
+                </p>
             </div>
         </div>
     </footer>
 </body>
-</html>
-""
+</html>""
