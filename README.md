@@ -181,7 +181,7 @@ If you use TCDE in your research, please cite:
   author       = {Wahbi, Mehdi},
   title        = {TCDE: Topological Cognitive Diffusive Emergence},
   year         = 2025,
-  publisher    = {Zenodo},
+  publisher    = {Mehdi Wahbi},
   doi          = {10.5281/zenodo.17907427},
   url          = {https://doi.org/10.5281/zenodo.17907427}
 }
