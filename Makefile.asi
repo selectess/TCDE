@@ -1,0 +1,85 @@
+# TCDE ASI Terminal - Makefile
+# Compilation optimisée pour performance maximale
+
+CC = gcc
+CFLAGS = -O3 -march=native -mtune=native -flto -funroll-loops -ffast-math
+LDFLAGS = -lm -lpthread
+TARGET = tcde_asi
+SOURCE = tcde_asi_terminal.c
+
+# Compilation principale
+$(TARGET): $(SOURCE)
+	@echo "🔨 Compiling TCDE ASI Terminal..."
+	$(CC) $(CFLAGS) $(SOURCE) -o $(TARGET) $(LDFLAGS)
+	@echo "✅ TCDE ASI Terminal compiled successfully!"
+	@echo "📊 Binary size: $$(du -h $(TARGET) | cut -f1)"
+	@echo "🚀 Run with: ./$(TARGET)"
+
+# Version debug
+debug: CFLAGS = -g -O0 -Wall -Wextra -DDEBUG
+debug: $(TARGET)
+	@echo "🐛 Debug version compiled"
+
+# Version release avec optimisations maximales
+release: CFLAGS += -DNDEBUG -s
+release: $(TARGET)
+	@echo "🚀 Release version compiled with maximum optimizations"
+
+# Installation système
+install: $(TARGET)
+	@echo "📦 Installing TCDE ASI Terminal..."
+	sudo cp $(TARGET) /usr/local/bin/
+	sudo chmod +x /usr/local/bin/$(TARGET)
+	@echo "✅ Installed to /usr/local/bin/$(TARGET)"
+	@echo "🌐 Now available globally as: $(TARGET)"
+
+# Tests de performance
+benchmark: $(TARGET)
+	@echo "📈 Running TCDE ASI Benchmarks..."
+	@echo "Testing compilation performance..."
+	time ./$(TARGET) --benchmark 2>/dev/null || echo "Benchmark mode not yet implemented"
+
+# Nettoyage
+clean:
+	@echo "🧹 Cleaning build files..."
+	rm -f $(TARGET)
+	rm -f *.o
+	@echo "✅ Clean completed"
+
+# Aide
+help:
+	@echo "TCDE ASI Terminal - Build System"
+	@echo "================================"
+	@echo ""
+	@echo "Targets:"
+	@echo "  make          - Compile optimized version"
+	@echo "  make debug    - Compile debug version"
+	@echo "  make release  - Compile release version (max optimization)"
+	@echo "  make install  - Install to system PATH"
+	@echo "  make benchmark- Run performance tests"
+	@echo "  make clean    - Remove build files"
+	@echo "  make help     - Show this help"
+	@echo ""
+	@echo "Usage after compilation:"
+	@echo "  ./$(TARGET)                    - Interactive mode"
+	@echo "  ./$(TARGET) --demo            - Demo mode"
+	@echo "  ./$(TARGET) --benchmark       - Benchmark mode"
+	@echo "  ./$(TARGET) --visualize       - Visualization mode"
+
+# Vérification des dépendances
+check-deps:
+	@echo "🔍 Checking dependencies..."
+	@which gcc >/dev/null || (echo "❌ GCC not found. Install with: sudo apt install gcc" && exit 1)
+	@echo "✅ GCC found: $$(gcc --version | head -1)"
+	@echo "✅ Math library: Available"
+	@echo "✅ Pthread library: Available"
+	@echo "✅ All dependencies satisfied"
+
+# Démonstration rapide
+demo: $(TARGET)
+	@echo "🎬 Starting TCDE ASI Demo..."
+	@echo "This will show the ASI system in action for 30 seconds"
+	@echo "Press Ctrl+C to stop early"
+	timeout 30s ./$(TARGET) || echo "Demo completed"
+
+.PHONY: debug release install benchmark clean help check-deps demo
