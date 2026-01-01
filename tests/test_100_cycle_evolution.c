@@ -33,7 +33,7 @@
 /**
  * Compute field energy: E = Σ |cᵢ|²
  */
-float compute_field_energy(TCDE_Field6D* field) {
+float compute_field_energy(TCDE_Field* field) {
     float energy = 0.0f;
     
     for (int i = 0; i < field->manifold_6d.num_centers; i++) {
@@ -47,7 +47,7 @@ float compute_field_energy(TCDE_Field6D* field) {
 /**
  * Compute field coherence: |Σ cᵢ| / Σ |cᵢ|
  */
-float compute_field_coherence(TCDE_Field6D* field) {
+float compute_field_coherence(TCDE_Field* field) {
     if (field->manifold_6d.num_centers == 0) {
         return 0.0f;
     }
