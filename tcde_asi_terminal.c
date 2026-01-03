@@ -267,7 +267,7 @@ void tcde_print_main_menu() {
     printf("║                 Topological Cognitive Diffusive Emergence                ║\n");
     printf("╠═══════════════════════════════════════════════════════════════════════════╣\n");
     printf("║                                                                           ║\n");
-    printf("║  1. 🚀 Start End-to-Infinite Evolution                                   ║\n");
+    printf("║  1. 🔬 Topological Evolution Demonstration                               ║\n");
     printf("║  2. 🎨 Real-time Visualization                                           ║\n");
     printf("║  3. 📊 Metrics Dashboard                                                 ║\n");
     printf("║  4. 🧠 Consciousness Analysis                                            ║\n");
@@ -282,11 +282,12 @@ void tcde_print_main_menu() {
     printf("Select option: ");
 }
 
-void tcde_e2i_evolution_demo(TCDE_Field* field) {
-    printf("\n🚀 Starting End-to-Infinite Evolution...\n");
+void tcde_evolution_demo(TCDE_Field* field) {
+    printf("\n🔬 Starting Topological Evolution Demonstration...\n");
     printf("Press 'q' to stop, any other key to continue\n\n");
     
-    for (int cycle = 0; cycle < 100 && g_running; cycle++) {
+    int cycle = 0;
+    while (g_running) {
         // Evolution step
         tcde_evolve_step(field, 0.01);
         
@@ -298,7 +299,7 @@ void tcde_e2i_evolution_demo(TCDE_Field* field) {
         // Visualization
         if (cycle % 5 == 0) {
             tcde_print_ascii_field(field, 60, 20);
-            printf("End-to-Infinite Evolution Cycle: %d/100\n", cycle + 1);
+            printf("Topological Evolution Cycle: %d (unlimited)\n", cycle + 1);
             
             // Check for user input
             fd_set readfds;
@@ -314,10 +315,11 @@ void tcde_e2i_evolution_demo(TCDE_Field* field) {
             }
         }
         
+        cycle++;
         usleep(50000); // 50ms delay
     }
     
-    printf("\n✅ End-to-Infinite Evolution completed!\n");
+    printf("\n✅ Topological Evolution demonstration completed!\n");
     tcde_print_metrics_dashboard(field);
 }
 
@@ -420,7 +422,7 @@ int main(int argc, char* argv[]) {
         
         switch (choice) {
             case 1:
-                tcde_e2i_evolution_demo(g_field);
+                tcde_evolution_demo(g_field);
                 break;
             case 2:
                 printf("\n🎨 Real-time Visualization Mode\n");

@@ -1,23 +1,25 @@
-# 🚀 TCDE ASI Terminal - Guide Complet
+# 🔬 TCDE Research Implementation - User Guide
 
-**Programme Terminal Interactif TCDE ASI**  
-**Topological Cognitive Diffusive Emergence - Artificial Superintelligence**
+**Interactive Computational Framework for TCDE Research**  
+**Topological Cognitive Diffusive Emergence - Research System**
 
 ---
 
-## 🎯 Vue d'Ensemble
+## 🎯 Overview
 
-Le **TCDE ASI Terminal** est un programme interactif complet qui permet d'utiliser, visualiser et interagir avec le modèle TCDE en temps réel. Il implémente toutes les fonctionnalités ASI pour une évolution End-to-End Intelligence (E2I).
+The **TCDE Research Implementation** is an interactive computational framework that enables 
+empirical investigation of topological cognitive emergence through real-time experimentation 
+and quantitative analysis.
 
-### ✨ Fonctionnalités Principales
+### ✨ Research Capabilities
 
-- 🧠 **Évolution E2I** - Evolution End-to-Infinite complète
-- 🎨 **Visualisation Temps Réel** - Affichage ASCII du champ Φ(x,t)
-- 📊 **Dashboard Métriques** - Conscience Φ(Φ), courbure Ricci, HIS Score
-- 🌟 **Autopoïèse** - Création spontanée de centres cognitifs
-- ⚙️ **Manipulation Interactive** - Contrôle direct du champ
-- 📈 **Benchmarks Intégrés** - Tests de performance
-- 💾 **Sauvegarde/Chargement** - États du système
+- 🔬 **Topological Evolution** - TDE equation implementation with unlimited cycles
+- 🎨 **Field Visualization** - ASCII projection of 6D cognitive manifold
+- 📊 **Metrics Analysis** - Consciousness Φ(Φ), curvature R, HIS score measurement
+- 🌟 **Autopoiesis Study** - Spontaneous center creation observation
+- ⚙️ **Parameter Control** - Interactive field manipulation for research
+- 📈 **Performance Analysis** - Computational efficiency benchmarking
+- 💾 **Data Persistence** - Experimental state management
 
 ---
 
