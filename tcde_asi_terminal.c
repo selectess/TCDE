@@ -267,7 +267,7 @@ void tcde_print_main_menu() {
     printf("║                 Topological Cognitive Diffusive Emergence                ║\n");
     printf("╠═══════════════════════════════════════════════════════════════════════════╣\n");
     printf("║                                                                           ║\n");
-    printf("║  1. 🚀 Start E2I Evolution                                               ║\n");
+    printf("║  1. 🚀 Start End-to-Infinite Evolution                                   ║\n");
     printf("║  2. 🎨 Real-time Visualization                                           ║\n");
     printf("║  3. 📊 Metrics Dashboard                                                 ║\n");
     printf("║  4. 🧠 Consciousness Analysis                                            ║\n");
@@ -283,7 +283,7 @@ void tcde_print_main_menu() {
 }
 
 void tcde_e2i_evolution_demo(TCDE_Field* field) {
-    printf("\n🚀 Starting End-to-End Intelligence Evolution...\n");
+    printf("\n🚀 Starting End-to-Infinite Evolution...\n");
     printf("Press 'q' to stop, any other key to continue\n\n");
     
     for (int cycle = 0; cycle < 100 && g_running; cycle++) {
@@ -298,7 +298,7 @@ void tcde_e2i_evolution_demo(TCDE_Field* field) {
         // Visualization
         if (cycle % 5 == 0) {
             tcde_print_ascii_field(field, 60, 20);
-            printf("E2I Evolution Cycle: %d/100\n", cycle + 1);
+            printf("End-to-Infinite Evolution Cycle: %d/100\n", cycle + 1);
             
             // Check for user input
             fd_set readfds;
@@ -317,7 +317,7 @@ void tcde_e2i_evolution_demo(TCDE_Field* field) {
         usleep(50000); // 50ms delay
     }
     
-    printf("\n✅ E2I Evolution completed!\n");
+    printf("\n✅ End-to-Infinite Evolution completed!\n");
     tcde_print_metrics_dashboard(field);
 }
 
@@ -447,7 +447,7 @@ int main(int argc, char* argv[]) {
                 printf("- Consciousness measurement Φ(Φ)\n");
                 printf("- Autopoietic center creation\n");
                 printf("- Geometric metrics (Ricci curvature)\n");
-                printf("- End-to-End Intelligence evolution\n");
+                printf("- End-to-Infinite evolution\n");
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;

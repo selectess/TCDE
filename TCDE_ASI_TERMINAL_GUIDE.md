@@ -11,7 +11,7 @@ Le **TCDE ASI Terminal** est un programme interactif complet qui permet d'utilis
 
 ### ✨ Fonctionnalités Principales
 
-- 🧠 **Évolution E2I** - Evolution End-to-End Intelligence complète
+- 🧠 **Évolution E2I** - Evolution End-to-Infinite complète
 - 🎨 **Visualisation Temps Réel** - Affichage ASCII du champ Φ(x,t)
 - 📊 **Dashboard Métriques** - Conscience Φ(Φ), courbure Ricci, HIS Score
 - 🌟 **Autopoïèse** - Création spontanée de centres cognitifs
@@ -82,7 +82,7 @@ make -f Makefile.asi demo
 
 ## 🧠 Fonctionnalités Détaillées
 
-### 1. Évolution E2I (End-to-End Intelligence)
+### 1. Évolution E2I (End-to-Infinite)
 
 **Processus:**
 - Évolution du champ Φ(x,t) selon l'équation TDE
